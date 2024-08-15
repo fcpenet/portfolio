@@ -1,33 +1,20 @@
-import {Link, Route, Routes} from 'react-router-dom';
+import FloatingNavigation from './components/floating-navigation/floating-navigation';
+import Footer from './components/footer/footer';
+import MainRoutes from './components/routes/mainRoutes';
+import MainPage from './components/main-page/main-page';
 
 export function App() {
   return (
     <div>
       <div>
-        <br/>
-        <hr/>
-        <br/>
-        <div role="navigation">
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-          </ul>
-        </div>
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <div>
-                This is the generated root route.{' '}
-                <Link to="/page-2">Click here for page 2.</Link>
-              </div>
-            }
-          />
-        </Routes>
-        {/* END: routes */}
+        <br />
+        <hr />
+        <br />
+        <FloatingNavigation />
+        <MainRoutes/>
+        <Footer />
       </div>
-      <div>Kiko Penetrante</div>
+
     </div>
   );
 }
