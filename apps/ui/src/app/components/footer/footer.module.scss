@@ -1,7 +1,26 @@
-/*
- * Replace this with your own classes
- *
- * e.g.
- * .container {
- * }
-*/
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  background: #ffffff;
+}
+
+.footer {
+  padding: 16px 24px;
+  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  height: 44px;
+  font-size: 12px;
+  line-height: 16px;
+  margin: auto;
+
+}
+
+.footer-element {
+  color: #666666;
+  padding: 0.25em;
+  a:first-of-type {
+    border-right: solid 1px #e2e2e2 ;
+  }
+}

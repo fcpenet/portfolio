@@ -1,1 +1,38 @@
-/* Your styles goes here. */
+$left-nav-width: 96px;
+.window-body {
+  position: relative;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.window-body::-webkit-scrollbar {
+  display: none;
+}
+
+.main-body-row {
+  max-width: 488px;
+  min-height: calc(100vh - 91px);
+  align-content: center;
+}
+
+@media screen and (max-width: 1023px) {
+  .container {
+    margin: 0 auto;
+    //width: 100vw;
+    @media screen and (max-width: 639px) {
+      margin: 0 24px;
+      width: calc(100% - 48px);
+    }
+  }
+  .main-body-row {
+    min-height: calc(100vh - 91px);
+    main {
+      @media screen and (max-width: 1023px) and (min-width: 639px) {
+        width: calc(100% - $left-nav-width);
+      }
+    }
+    @media screen and (min-width: 640px) {
+      width: 100%;
+    }
+  }
+}
