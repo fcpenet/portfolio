@@ -6,11 +6,9 @@ import { Col, Container, Row } from 'react-bootstrap';
 export function App() {
   return (
     <div className={styles['window-body']}>
-      <Container>
-        <Row className={'justify-content-center align-items-center'}>
-          <Col className={styles['main-body-row']}>
+      <Container className={styles['main-body-row']}>
+        <Row>
             <MainRoutes />
-          </Col>
         </Row>
       </Container>
       <Footer />

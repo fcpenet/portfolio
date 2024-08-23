@@ -7,7 +7,9 @@ export interface HighchartsReactWrapperProps {
 export function HighchartsReactWrapper({options}: HighchartsReactWrapperProps) {
   return (
     <div>
-      <HighchartsReact highcharts={Highcharts} options={options} />
+      <HighchartsReact highcharts={Highcharts} options={{...options, credits: {
+          enabled: false
+        },}} />
     </div>
   );
 }
